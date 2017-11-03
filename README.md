@@ -1,2 +1,2 @@
 # ZeroWM
-Very simple window manager 
+Very simple window manager written in Python
