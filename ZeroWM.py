@@ -45,7 +45,6 @@ class windowManagerInfo:  # Window manager constants
 class wm(object):
     """Initialise WM variables and open display"""
     def __init__(self):
-        log(0, "Starting... ")
         self.windowList = []  # List of opened windows
         self.display = Display()  # Initialise display
         self.colormap = self.display.screen().default_colormap  # Initialise colourmap
