@@ -132,13 +132,13 @@ class wm(object):
         for key in self.grabbedKeys:  # For each key to grab,
             self.grabKey(key, X.Mod1Mask)  # Grab the key with the modifer of Alt
 
-    def resizeWindow(window, direction):
-        windowW = window.get_geometry().width
-        windowH = window.get_geometry().height
-        if direction == 0: window.configure(width=windowW-1)
-        elif direction == 1: window.configure(width=windowW+1)
-        elif direction == 2: window.configure(height=windowH-1)
-        elif direction == 3: window.configure(height=windowH+1)
+    #def resizeWindow(window, direction):
+    #    windowW = window.get_geometry().width
+    #    windowH = window.get_geometry().height
+    #    if direction == 0: window.configure(width=windowW-1)
+    #    elif direction == 1: window.configure(width=windowW+1)
+    #    elif direction == 2: window.configure(height=windowH-1)
+    #    elif direction == 3: window.configure(height=windowH+1)
 
 
     """Change the position of an active window"""
@@ -163,17 +163,17 @@ class wm(object):
 
     """Handle key presses"""
     def handleKeyPress(self, event): 
-        if self.currentMode == "resize":                                                             # If resize mode is enabled:
-            if event.detail in self.left: self.resizeWindow(event.window, 0)                        # Alt+Left Arrow: resize window (x-1)
-            elif event.detail in self.right: self.moveWindow(event.window, 1)                       # Alt+Right Arrow: resize window (x+1)
-            elif event.detail in self.up: self.moveWindow(event.window, 2)                          # Alt+Up Arrow: resize window (y-1)
-            elif event.detail in self.down: self.moveWindow(event.window, 3)                        # Alt+Down Arrow: resize window (y+1)
-        else:                                                                                       # Otherwise,
-            if event.detail in self.left: self.moveWindow("left")                                   # Alt+Left Arrow: move a window left
-            elif event.detail in self.right: self.moveWindow("right")                               # Alt+Right Arrow: move a window right
-            elif event.detail in self.up: self.moveWindow("up")                                     # Alt+Up Arrow: move a window up
-            elif event.detail in self.down: self.moveWindow("down")                                 # Alt+Down Arrow: move a window down
-        if event.detail in self.t: self.runProcess(preferences.applicationDefaults.terminal)      # Alt+T: Launch a terminal
+      #  if self.currentMode == "resize":                                                             # If resize mode is enabled:
+            #if event.detail in self.left: self.resizeWindow(event.window, 0)                        # Alt+Left Arrow: resize window (x-1)
+           # elif event.detail in self.right: self.moveWindow(event.window, 1)                       # Alt+Right Arrow: resize window (x+1)
+          #  elif event.detail in self.up: self.moveWindow(event.window, 2)                          # Alt+Up Arrow: resize window (y-1)
+         #   elif event.detail in self.down: self.moveWindow(event.window, 3)                        # Alt+Down Arrow: resize window (y+1)
+     #   else:                                                                                       # Otherwise,
+        if event.detail in self.left: self.moveWindow("left")                                   # Alt+Left Arrow: move a window left
+        elif event.detail in self.right: self.moveWindow("right")                               # Alt+Right Arrow: move a window right
+        elif event.detail in self.up: self.moveWindow("up")                                     # Alt+Up Arrow: move a window up
+        elif event.detail in self.down: self.moveWindow("down")                                 # Alt+Down Arrow: move a window down
+        elif event.detail in self.t: self.runProcess(preferences.applicationDefaults.terminal)      # Alt+T: Launch a terminal
         elif event.detail in self.e: self.runProcess(preferences.applicationDefaults.launcher)      # Alt+E: Launch a program launcher
         elif event.detail in self.x: self.destroyWindow(event)                                      # ALT+X: Close a window
         elif event.detail in self.r: self.currentMode = "resize"                                    # ALT+R: Enable resize mode
