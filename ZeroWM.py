@@ -65,10 +65,13 @@ class wm(object):
 
     """Destroy an active window"""
     def destroyWindow(self, event):
-        self.activeWindow.destroy()
-        self.windowList.remove(self.activeWindow)
-        self.activeWindow = None
-
+        try:
+            self.activeWindow.destroy()
+            self.windowList.remove(self.activeWindow)
+            self.activeWindow = None
+        except:
+            log(2, "No focused window!")
+ 
     def updateFocus(self):
         window = self.display.screen().root.query_pointer().child
         if window != 0:
@@ -76,9 +79,9 @@ class wm(object):
 
     def updateBorders(self):
         for window in self.windowList:
-            gc = self.rootWindow.create_gc()
-            window.fill_rectangle(gc, 0, window.get_geometry().y-5, window.get_geometry().width, 5)
-            window.draw_text(gc, window.get_geometry().width/2, 5, "Hello, World!", "ff0011")
+            #gc = self.rootWindow.create_gc()
+            #window.fill_rectangle(gc, 0, window.get_geometry().y-5, window.get_geometry().width, 5)
+            #window.draw_text(gc, window.get_geometry().width/2, 5, "Hello, World!", "ff0011")
             if window != self.activeWindow:
                 borderColour = preferences.theme.border.inactiveColour
             else:
