@@ -82,7 +82,7 @@ terminal={"name":"LXTerminal", "command":["/usr/bin/lxterminal"]}
 - Q: How did you get your prompt like that in the screenshot?
   A: [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh) with Agnoster
   
- - Q: Is it true that you're actually reptile and not a programmer?
+ - Q: Is it true that you're actually a reptile and not a programmer?
    A: No. *slithers away*
 
 ## Known bugs:
@@ -91,7 +91,7 @@ terminal={"name":"LXTerminal", "command":["/usr/bin/lxterminal"]}
 
 - Some applications (Noteably, Doom) leave a black square when closing. I'm not sure what's causing this but I will look in to it
 
-- Resizing window is borked. This kind of makes the WM a little useless, but don't worry, I'll get there in the end.
+- Resizing windows is borked. This kind of makes the WM a little useless, but don't worry, I'll get there in the end.
 
 ## Thanks to:
 
