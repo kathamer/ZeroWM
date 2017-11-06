@@ -79,6 +79,9 @@ terminal={"name":"LXTerminal", "command":["/usr/bin/lxterminal"]}
 - Q: How do I run this?
   A: See the `Usage` section above.
   
+- Q: How did you get your prompt like that in the screenshot?
+  A: [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh) with Agnoster
+  
  - Q: Is it true that you're actually reptile and not a programmer?
    A: No. *slithers away*
 
