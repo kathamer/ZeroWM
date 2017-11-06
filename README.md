@@ -57,7 +57,7 @@ All availiable preferences can be modified by editing Preferences.py. Avaliable 
 
 All application defaults can be modified by editing Preferences.preferences.applicationDefaults. They follow this syntax:
 
-<applicationType>={name:"<name of command>", "command":["<full path to command>", <arg1>, <arg2>, <arg...>]}
+applicationType={name:"<name of command>", "command":["full path to command", "arg1", "arg2", "arg..."]}
   
 For example, the terminal default might look like this:
 
@@ -81,3 +81,16 @@ terminal={"name":"LXTerminal", "command":["/usr/bin/lxterminal"]}
   
  - Q: Is it true that you're actually reptile and not a programmer?
    A: No. *slithers away*
+
+## Known bugs:
+
+- Closing some windows causes thousands of X errors that have no effect on the window manager, perhaps it might be possible to just suppress these since they don't actually cause anything bad to happen
+
+- Some applications (Noteably, Doom) leave a black square when closing. I'm not sure what's causing this but I will look in to it
+
+- Resizing window is borked. This kind of makes the WM a little useless, but don't worry, I'll get there in the end.
+
+## Thanks to:
+
+[/u/p4squale](https://reddit.com/u/p4squale) on Reddit for the inspiration and some help with the code. 
+[Eberhard Grossgasteiger](https://www.pexels.com/u/eberhardgross/) on Pexels for the wallpaper.
