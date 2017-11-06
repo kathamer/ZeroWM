@@ -95,5 +95,5 @@ terminal={"name":"LXTerminal", "command":["/usr/bin/lxterminal"]}
 
 ## Thanks to:
 
-[/u/p4squale](https://reddit.com/u/p4squale) on Reddit for the inspiration and some help with the code.  
+[/u/pasqu4le](https://reddit.com/u/pasqu4le) on Reddit for the inspiration and some help with the code.  
 [Eberhard Grossgasteiger](https://www.pexels.com/u/eberhardgross/) on Pexels for the wallpaper.
