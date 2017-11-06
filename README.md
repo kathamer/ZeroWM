@@ -23,6 +23,6 @@ Super simple window manager written in Python
 - Mode support
 - Redesigned logos and wallpapers
 
-# Screenshots:
+## Screenshots:
 
 ![Screenshot of ZeroWM](https://i.redd.it/i35szxp7o7wz.png)
