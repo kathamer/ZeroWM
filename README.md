@@ -1,6 +1,8 @@
 # ZeroWM
 Super simple window manager written in Python
 
+Note: I am not currently developing this project. I am now working on HackWM which is much better.
+
 ## New in version 1.0 (Spicy Salamander):
 
 - Window borders
